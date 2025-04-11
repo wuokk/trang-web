@@ -1,0 +1,97 @@
+	@media (max-width: 450px) {
+	  .text {
+		font-size: 10px;
+	  }
+	  .menu a{
+		font-size:15px;
+	  }
+	}
+@media (min-width: 451px) {
+  .menu a{
+		font-size:20px;
+	  }
+}
+
+header {
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 0;
+		background: linear-gradient(180deg, rgba(160, 28, 28, 1) 0%, rgba(160, 28, 28, 0) 100%), url('../Anh/bgh.jpg');
+		background-size: 100vw;
+		background-position: center, center;
+		background-repeat: no-repeat;
+		backdrop-filter: blur(10px);
+		transition: background 0.3s ease-in-out;
+		z-index: 1000;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		height:20vw;
+		
+	}
+	header.scrolled {
+		background: rgba(160, 28, 28, 0.9);
+	}
+	.logo-container {
+    display: flex;
+    align-items: center;
+	}
+
+	.logo {
+		height: 10vw; 
+		margin: 2vw 1vw 2vw 4vw;
+		gap: 5px;
+	}
+
+	.text {
+		line-height: 1;
+		font-family: 'Inter', sans-serif;
+		font-weight: 500;
+		color: white;
+		margin:0;
+	}
+	.timkiem {
+		display: flex;
+		background: white;
+		border-radius: 20px;
+		padding: 5px;
+		margin-top:5vw;
+        margin-right:10vw;
+	}
+	.menu {
+		width: 100%; 
+		height: 8vh; 
+		background: #a01c1c;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.menu ul {
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	.menu li {
+		margin: 0 20px;
+	}
+	.menu a {
+		color: white;
+		text-decoration: none;
+		width: 10vw;
+		height: 6vw; 
+		display: flex; 
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px; 
+		transition: background 0.3s ease;
+		font-family:Times New Roman;
+	}
+	.menu a:hover {
+		background: white;
+		color: darkred;
+		border-radius: 5px;
+	}

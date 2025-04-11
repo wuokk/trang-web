@@ -1,0 +1,31 @@
+	footer{
+		background-color:black;
+		height:200px;
+		align-items: center;
+		padding:2vw 5vw;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin:5vh 0 0 0;
+	}
+	footer >div {
+		color:white;
+		font-size:150%;
+		
+	}
+	.bando {
+		width:200px;
+		height:130px 
+	}
+@media (max-width: 450px) {
+	.bando {
+		width:100px;
+		height:90px 
+	}
+	footer >div {
+		color:white;
+		font-size:100%;
+		
+	}
+
+}

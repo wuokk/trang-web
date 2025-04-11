@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="header-menu.css">
+		<link rel="stylesheet" href="footer-bando.css">
+    <title>Trang Web Tuyen sinh</title>
+    <style>
+	
+        body {    
+            padding: 0;	
+			margin:0;
+        }
+		.dieuhuong {
+			color:red;
+			font-size:150%;
+		}
+		.dieuhuong a:link {
+			color: red;
+		}
+		div{
+			margin-left:5px;
+		}
+		.bieumau{
+			display:flex;
+			
+		}
+		.modal, .success {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            width: 300px;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .close {
+            float: right;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+		.khungbm
+		{
+			display: flex;
+			align-items: flex-start;
+			margin-top:7px;
+			margin-bottom: 7px;
+		}
+		input[type="radio"] {
+			width: 12px;
+			height: 12px;
+			margin: 0;
+		}
+		label{
+			margin-left:6px;
+			margin-right: 6px;
+		}
+		.ndung{
+			font-size:125%;
+		}
+    </style>
+	
+	
+	
+</head>
+<body>
+	<header>
+		<div class="logo-container">
+			<img src="Anh/logormv.png" alt="Logo Trường" class="logo">
+			<div class="text">
+				<h1>PHỔ THÔNG DÂN TỘC NỘI TRÚ</h1>
+				<p style="font-family:sans-serif" >ATK SON DUONG ETHNIC MINORITY BOARDING SCHOOL</p>
+			</div>
+		</div>
+	</header>
+	<nav class="menu">
+		<ul>
+			<li><a href="MAIN.html">Trang chủ</a></li>
+			<li><a href="gioithieuchungcuatruong.html">Giới thiệu</a></li>
+			<!--<li><a href="#">ND 1</a></li>-->
+			<li><a href="tuyensinh.html">Tuyển sinh</a></li>
+			<li><a href="hoatdong.html">Hoạt động</a></li>
+			<li><a href="media.html">Liên hệ</a></li>
+		</ul>
+	</nav>
+	<!------------------------------------------------------------------------------------------------->
+	<div>
+		<h1><b>TUYỂN SINH</b></h1>
+	</div>
+			<ul>
+    <div>
+		<p><b> 📢 TUYỂN SINH NĂM 2025 – CƠ HỘI TỎA SÁNG TƯƠNG LAI 🌟</b> <br>
+
+            <br>🎯 Bạn đang tìm kiếm một môi trường học tập chất lượng, hiện đại và đầy cảm hứng?<br>Hãy đến với Trường PTDTNT ATK Sơn Dương
+
+            <br>✅ Chương trình đào tạo tiên tiến – Kiến thức vững vàng
+            <br>✅ Đội ngũ giáo viên tận tâm – Đồng hành, dẫn dắt tận tình
+            <br>✅ Hoạt động ngoại khóa đa dạng – rất đa dạng
+
+            <br>🔥 Đừng bỏ lỡ cơ hội! Hãy đăng kí ngay
+
+            <br>📞 Liên hệ: 0357446677
+			
+            <br>🌐 Website:<a href="http://ptdtntatksonduong.tuyenquang.edu.vn/">Trường PTDTNT ATK Sơn Dương</a> 
+			
+            <br>📍 Địa chỉ: Trường PTDTNT ATK Son Duong
+
+            <br>✨ Hành trình chinh phục tri thức bắt đầu từ đây! 🚀
+		<br>
+		<img src="img/tbs4.jpg" width="400" height="600" >
+		<img src="img/tbs2.jpg" width="400" height="600" >
+		<img src="img/tbs3.jpg" width="400" height="600" >
+    </div>
+	</ul>
+	<!-------------------------------------------------------!>
+	<button onclick="hienform()" style="margin-left:4vw">Đăng ký ngay</button>
+    
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="formdangky">
+        <span class="close" onclick="dongform()">&times;</span>
+        <h2>Đăng ký tuyển sinh</h2>
+        <input type="text" id="name" placeholder="Nhập họ và tên" required><br>
+        <input type="email" id="email" placeholder="Nhập email" required><br>
+		<input type="tel" id="phone" placeholder="Nhập số điện thoại" required>  
+		<select id="class" required>  
+			<option value="">Chọn lớp</option>  
+			<option value="10">Lớp 10</option>  
+			<option value="11">Lớp 11</option>  
+			<option value="12">Lớp 12</option>  
+		</select>  
+		<div class="khungbm"> 
+			<input type="radio" name="gender" value="Nam" required>
+			<label for="gender">Nam </label>
+			<input type="radio" name="gender" value="Nữ" required> 
+			<label for="gender">Nữ</label>  
+		</div>
+        <button onclick="submittt()">Xác nhận</button>
+    </div>
+    
+    <div class="success" id="tb">
+        <span class="close" onclick="tbdong()">&times;</span>
+        <h2>Chúc mừng! Bạn đã đăng ký thành công!</h2>
+    </div>
+    
+    <script>
+        function hienform() {
+            document.getElementById('formdangky').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+        function dongform() {
+            document.getElementById('formdangky').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+        function submittt() {
+			const name = document.getElementById('name').value.trim();
+			const email = document.getElementById('email').value.trim();
+			const phone = document.getElementById('phone').value.trim();
+			const CHONLOP = document.getElementById('class').value;
+			const CHONGT = document.querySelector('input[name="gender"]:checked');
+
+			if (name === '' || email === '' || phone === '' || CHONLOP === '' || !CHONGT) {
+				alert("Vui lòng nhập đầy đủ thông tin!");
+				return;
+        }
+
+			dongform();
+			document.getElementById('tb').style.display = 'block';
+			document.getElementById('overlay').style.display = 'block';
+        }
+        function tbdong() {
+            document.getElementById('tb').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+	
+	<!--footer------------------------------------------------------------------------------------------------!>
+	<footer>
+		<div> Nhóm 3
+			<br>
+			Liên hệ: Nhom3@gmail.com
+		</div>	
+		<div>
+		
+		</div>
+	<iframe
+	class="bando"
+		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.1364310015915!2d105.42282381022636!3d21.753211880000578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134c9c8de86fdfb%3A0xea88118e4323ef9f!2zVHLGsOG7nW5nIFBo4buVIFRow7RuZyBEw6JuIFThu5ljIE7hu5lpIFRyw7ogQVRLIFPGoW4gRMawxqFuZw!5e1!3m2!1svi!2s!4v1742300817693!5m2!1svi!2s" 
+	></iframe>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+.nghieng {
+		font-style: italic;
+	}
+	.tieudetin{
+		color: blue; 
+	}
+	.anhtin{
+		width:55vw;
+		margin-top:20px;
+	}
+	main>img{
+		width:60vw;
+	}
+	main>div{
+		font-size:120%;
+		text-indent: 20px;
+	}
+.content {
+		width: 65vw;
+		padding: 20px;
+	}
+.sidebar-tieude{
+		background-color:rgba(160, 28, 28, 0.9);
+		font-size:120%;
+		font-weight:bold;
+		height:10vh;
+		display: flex;
+		justify-content: center;
+		align-items: center; 
+		color:white;
+	}
+	.btn {
+		display: inline-block;
+		padding: 10px 20px;
+		background-color: #ff6600;
+		color: white;
+		text-decoration: none;
+		border-radius: 5px;
+		transition: background 0.3s;
+		margin:1vh 1vw;
+	}
+
+	.btn:hover {
+		background-color: #cc5500; /* Màu khi di chuột vào */
+	}
+	.sidebar {
+		width: 20vw;
+		background: #f4f4f4;
+		border-radius: 10px;
+	}
+	.thin-border {
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		padding:2px;
+    	}
+	.blur-border {
+		background-color: white;
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);     
+		
+    	}
+body {
+		margin:0;
+	}
+	.thanweb{
+		display: flex;
+		max-width: 1200px;
+		margin: 3vh 6vw;
+	}
